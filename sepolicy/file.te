@@ -1,0 +1,68 @@
+# adbd config file
+type adbd_data_file, file_type, data_file_type;
+
+# AEE exp
+type aee_exp_data_file, file_type, data_file_type;
+type aee_dumpsys_data_file, file_type, data_file_type;
+
+# SF rtt dump
+type sf_rtt_file, file_type, data_file_type;
+
+type proc_ged, fs_type;
+type proc_lk_env, fs_type;
+
+# TEEI data file
+type teei_data_file, file_type, data_file_type;
+type teei_thh_data_file, file_type, data_file_type;
+
+# data_tmpfs_log
+type data_tmpfs_log_file, file_type, data_file_type;
+
+type sysfs_md32, fs_type, sysfs_type;
+type sysfs_scp, fs_type, sysfs_type;
+
+# Socket types
+type volte_imcb_socket, file_type;
+type volte_ua_socket, file_type;
+type volte_stack_socket, file_type;
+type rild_ims_socket, file_type;
+type rild_imsm_socket, file_type;
+type volte_vt_socket, file_type;
+type rild_mal_socket, file_type;
+type rild_mal_at_socket, file_type;
+type rild_mal_md2_socket, file_type;
+type rild_mal_at_md2_socket, file_type;
+type netdiag_socket, file_type;
+
+type custom_file, file_type, data_file_type;
+type radvd_data_file, file_type, data_file_type;
+# ims ipsec config file
+type ims_ipsec_data_file, file_type, data_file_type;
+type c2k_file, file_type, data_file_type;
+
+type rawfs, fs_type, mlstrustedobject;
+type sysfs_vcorefs_pwrctrl, fs_type, sysfs_type;
+
+type emd_device, dev_type;
+# battery_cmd file
+type proc_battery_cmd, fs_type;
+
+type stp_dump_data_file, file_type,data_file_type;
+type wod_dns_socket, file_type;
+type wod_apn_conf_file, file_type, data_file_type;
+type wod_ipsec_conf_file, file_type, data_file_type;
+type wod_ipsec_socket, file_type;
+type rild_oem_socket, file_type;
+# vtservice data file
+type vtservice_data_file, file_type, data_file_type;
+# gpu debugfs file
+type debugfs_ged, fs_type, debugfs_type;
+type persist_data_file, file_type, data_file_type;
+type akmd8963_access_file1, file_type,data_file_type;
+type akmd8963_access_file2, file_type,data_file_type;
+type msensor_data_file, file_type, data_file_type;
+#autokd data file
+type autokd_data_file, file_type, data_file_type;
+
+# NE core_forwarder
+type aee_core_data_file, file_type, data_file_type;

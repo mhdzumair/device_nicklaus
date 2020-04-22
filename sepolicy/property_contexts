@@ -1,0 +1,33 @@
+#=============allow teei daemon and init_thh daemon to set property  ==============
+soter.teei.   u:object_r:soter_teei_prop:s0
+#=============allow pppd ==============
+ctl.pppd_gprs   u:object_r:pppd_gprs_prop:s0
+
+persist.mtk.main.attach u:object_r:persist_mtk_main_attach:s0
+#=============allow wifi offload deamon  ==============
+net.wo.   u:object_r:mtk_wod_prop:s0
+persist.net.wo.   u:object_r:persist_wod_prop:s0
+
+#=============allow netlog==============
+#debug.mtklog.init.flag
+debug.mtklog  u:object_r:debug_mtklog_prop:s0
+#persist.mtklog.log2sd.path
+persist.mtklog u:object_r:persist_mtklog_prop:s0
+#debug.netlog.stopreason
+debug.netlog u:object_r:debug_netlog_prop:s0
+
+# persist.dm.lock
+persist.dm. u:object_r:persist_dm_prop:s0
+
+#=============allow AEE==============
+# persist.mtk.aee.mode && persist.mtk.aee.dal
+persist.mtk.aee u:object_r:persist_mtk_aee_prop:s0
+
+# persist.aee.core.dump && persist.aee.core.direct
+persist.aee u:object_r:persist_aee_prop:s0
+
+# debug.mtk.aee.db
+debug.mtk.aee u:object_r:debug_mtk_aee_prop:s0
+
+#=============allow AEE_Dumpstate==============
+debug.bq.dump u:object_r:debug_bq_dump_prop:s0

@@ -1,0 +1,9 @@
+# Fingerprint device
+allow fingerprintd sysfs:file rw_file_perms;
+allow fingerprintd storage_file:dir create_dir_perms;
+allow fingerprintd storage_file:lnk_file create_file_perms;
+allow fingerprintd mnt_user_file:dir create_dir_perms;
+allow fingerprintd mnt_user_file:lnk_file create_file_perms;
+allow fingerprintd fuse:dir create_dir_perms;
+allow fingerprintd fuse:file create_file_perms;
+allow fingerprintd power_service:service_manager find;

@@ -1,0 +1,128 @@
+# Sysfs nodes
+/sys/android_touch/gesture           u:object_r:smartwake_sysfs:s0
+
+# camera
+/dev/camera-pipemgr                                             u:object_r:camera_device:s0
+/dev/camera-sysram                                              u:object_r:camera_device:s0
+
+#tee
+/dev/tee1 u:object_r:tee_part_device:s0
+/dev/tee2 u:object_r:tee_part_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/tee1		u:object_r:tee_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/tee2		u:object_r:tee_block_device:s0
+
+/dev/trusty-ipc-dev0 u:object_r:tee_device:s0
+/data/thh(/.*)? u:object_r:teei_data_file:s0
+/data/misc/thh(/.*)? u:object_r:teei_thh_data_file:s0
+/data/misc/aee_interim(/.*)? u:object_r:coredump_file:s0
+/dev/teei_config u:object_r:teei_config_device:s0
+/dev/teei_client u:object_r:teei_client_device:s0
+/dev/tz_vfs u:object_r:teei_vfs_device:s0
+/dev/emmcrpmb0 u:object_r:teei_rpmb_device:s0
+/dev/teei_fp u:object_r:teei_fp_device:s0
+/dev/ut_keymaster u:object_r:ut_keymaster_device:s0
+/dev/dri/card0 u:object_r:dri_device:s0
+
+#teei_daemon
+/(system\/vendor|vendor)/bin/teei_daemon u:object_r:teei_daemon_exec:s0
+
+#tmpfs
+/data/data_tmpfs_log(/.*)? u:object_r:data_tmpfs_log_file:s0
+/data/tmp_mnt/data_tmpfs_log(/.*)? u:object_r:data_tmpfs_log_file:s0
+
+#socket
+/dev/socket/volte_imsa1(/.*)?	u:object_r:volte_imsa1_socket:s0
+/dev/socket/volte_stack(/.*)?	u:object_r:volte_stack_socket:s0
+
+/dev/emd.* u:object_r:emd_device:s0
+/data/misc/stp_dump(/.*)? u:object_r:stp_dump_data_file:s0
+/(system\/vendor|vendor)/bin/starter u:object_r:starter_exec:s0
+/dev/socket/wod_dns(/.*)? u:object_r:wod_dns_socket:s0
+/data/ipsec/wo(/.*)? u:object_r:wod_apn_conf_file:s0
+/data/ipsec(/.*)? u:object_r:wod_ipsec_conf_file:s0
+/dev/socket/wod_ipsec(/.*)? u:object_r:wod_ipsec_socket:s0
+/dev/socket/rild-oem(/.*)? u:object_r:rild_oem_socket:s0
+/sys/kernel/debug/ged(/.*)? u:object_r:debugfs_ged:s0
+
+#data files
+/data/aee_exp(/.*)?  u:object_r:aee_exp_data_file:s0
+/data/dumpsys(/.*)?    u:object_r:aee_dumpsys_data_file:s0
+/data/anr/SF_RTT(/.*)? u:object_r:sf_rtt_file:s0
+/data/misc/radvd(/.*)? u:object_r:radvd_data_file:s0
+/data/misc/setkey(/.*)?      u:object_r:ims_ipsec_data_file:s0
+/data/misc/setkey/setkey.conf        u:object_r:ims_ipsec_data_file:s0
+/data/misc/setkey/setkey_bak.conf    u:object_r:ims_ipsec_data_file:s0
+/data/misc/setkey/setkey_latest.conf u:object_r:ims_ipsec_data_file:s0
+/persist(/.*)?         u:object_r:persist_data_file:s0
+/data/misc/akmd_set.txt u:object_r:akmd8963_access_file1:s0
+/data/misc/PDC.ini u:object_r:akmd8963_access_file2:s0
+/data/misc/egistec(/.*)? u:object_r:fingerprintd_data_file:s0
+
+#sysfs
+/sys/devices/virtual/misc/md32(/.*)?  u:object_r:sysfs_md32:s0
+/sys/devices/virtual/misc/scp(/.*)?  u:object_r:sysfs_scp:s0
+
+#socket
+/dev/socket/volte_imsm(/.*)? u:object_r:rild_imsm_socket:s0
+/dev/socket/volte_imsvt1(/.*)? u:object_r:volte_imsvt1_socket:s0
+/dev/socket/volte_imcb(/.*)? u:object_r:volte_imcb_socket:s0
+/dev/socket/volte_ua(/.*)? u:object_r:volte_ua_socket:s0
+/dev/socket/rild-ims(/.*)? u:object_r:rild_ims_socket:s0
+/dev/socket/volte_imsm_dongle(/.*)? u:object_r:rild_imsm_socket:s0
+/dev/socket/volte_vt(/.*)? u:object_r:volte_vt_socket:s0
+/dev/socket/rilproxy-mal(/.*)? u:object_r:rild_mal_socket:s0
+/dev/socket/rild-mal(/.*)? u:object_r:rild_mal_socket:s0
+/dev/socket/rild-mal-at(/.*)? u:object_r:rild_mal_at_socket:s0
+/dev/socket/rild-mal-md2(/.*)? u:object_r:rild_mal_md2_socket:s0
+/dev/socket/rild-mal-at-md2(/.*)? u:object_r:rild_mal_at_md2_socket:s0
+/dev/socket/mal-mfi(/.*)? u:object_r:mal_mfi_socket:s0
+/dev/socket/mal-mfi-dongle(/.*)? u:object_r:mal_mfi_socket:s0
+/dev/socket/wod_sim(/.*)? u:object_r:wod_sim_socket:s0
+/dev/socket/wod_action(/.*)? u:object_r:wod_action_socket:s0
+/dev/socket/netdiag(/.*)? u:object_r:netdiag_socket:s0
+
+#device
+/dev/qemu_pipe(/.*)? u:object_r:qemu_pipe_device:s0
+/dev/hotknot(/.*)? u:object_r:hotknot_device:s0
+/dev/ir-learning u:object_r:irrx_device:s0
+/dev/aal_als(/.*)? u:object_r:aal_als_device:s0
+/dev/logo(/.*)? u:object_r:logo_device:s0
+/dev/md32(/.*)? u:object_r:md32_device:s0
+/dev/scp(/.*)? u:object_r:scp_device:s0
+/dev/ttyACM0        u:object_r:ttyACM_device:s0
+/dev/eemcs.* u:object_r:eemcs_device:s0
+/dev/misc(/.*)? u:object_r:misc_device:s0
+/dev/wmtdetect(/.*)? u:object_r:wmtdetect_device:s0
+/dev/pro_info(/.*)? u:object_r:pro_info_device:s0
+/dev/usb-ffs/adb(/.*)? u:object_r:usb_ffs_device:s0
+/dev/otp        u:object_r:otp_device:s0
+/dev/rfkill(/.*)? u:object_r:rfkill_device:s0
+/dev/CAM_CAL_DRV1(/.*)? u:object_r:CAM_CAL_DRV1_device:s0
+/dev/CAM_CAL_DRV2(/.*)? u:object_r:CAM_CAL_DRV2_device:s0
+/dev/CAM_CAL_DRV3(/.*)? u:object_r:CAM_CAL_DRV3_device:s0
+
+# Custom files
+/custom(/.*)?		u:object_r:custom_file:s0
+
+#block
+/dev/block/mmcblk0 u:object_r:mmcblk0_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.msdc0/by-name/persist           u:object_r:persist_block_device:s0
+/dev/block/platform/mtk-msdc\.0/[0-9]+\.(msdc|MSDC)0/by-name/oem	u:object_r:oem_block_device:s0
+
+#Executables
+/(system\/vendor|vendor)/bin/boot_logo_updater u:object_r:boot_logo_updater_exec:s0
+/(system\/vendor|vendor)/bin/netdiag u:object_r:netdiag_exec:s0
+/(system\/vendor|vendor)/bin/sn u:object_r:sn_exec:s0
+/(system\/vendor|vendor)/bin/nvram_agent_binder u:object_r:nvram_agent_binder_exec:s0
+/(system\/vendor|vendor)/bin/orientationd u:object_r:orientationd_exec:s0
+/(system\/vendor|vendor)/bin/thermalindicator u:object_r:thermalindicator_exec:s0
+/(system\/vendor|vendor)/bin/akmd8963 u:object_r:akmd8963_exec:s0
+/(system\/vendor|vendor)/bin/autokd u:object_r:autokd_exec:s0
+/(system\/vendor|vendor)/bin/akmd09911 u:object_r:akmd09911_exec:s0
+/(system\/vendor|vendor)/bin/akmd8975 u:object_r:akmd8975_exec:s0
+/(system\/vendor|vendor)/bin/dm_agent_binder u:object_r:dm_agent_binder_exec:s0
+/(system\/vendor|vendor)/bin/init_thh u:object_r:init_thh_service_exec:s0
+/(system\/vendor|vendor)/bin/sysenv_daemon u:object_r:sysenv_daemon_exec:s0
+/(system\/vendor|vendor)/bin/aal u:object_r:aal_exec:s0
+/(system\/vendor|vendor)/bin/slpd u:object_r:slpd_exec:s0
+/(system\/vendor|vendor)/bin/MtkCodecService u:object_r:MtkCodecService_exec:s0
