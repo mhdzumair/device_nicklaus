@@ -31,3 +31,6 @@ debug.mtk.aee u:object_r:debug_mtk_aee_prop:s0
 
 #=============allow AEE_Dumpstate==============
 debug.bq.dump u:object_r:debug_bq_dump_prop:s0
+
+#============= allow mal ==============
+persist.mal u:object_r:persist_mal_prop:s0

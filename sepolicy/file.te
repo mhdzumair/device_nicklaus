@@ -66,3 +66,9 @@ type autokd_data_file, file_type, data_file_type;
 
 # NE core_forwarder
 type aee_core_data_file, file_type, data_file_type;
+
+type mal_data_file, file_type, data_file_type;
+type rild_mal_socket, file_type;
+type rild_mal_at_socket, file_type;
+type rild_mal_md2_socket, file_type;
+type rild_mal_at_md2_socket, file_type;
