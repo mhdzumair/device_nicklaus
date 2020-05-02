@@ -39,20 +39,44 @@ ADDITIONAL_DEFAULT_PROPERTIES += persist.service.adb.enable=1
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_device.xml:system/etc/audio_device.xml \
-    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml
+$(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/audio,system/vendor/etc)
+
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/bluetooth,system/etc/bluetooth)
 
 # Media
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+		$(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
+		$(LOCAL_PATH)/configs/media/media_codecs_performance.xml:system/etc/media_codecs_performance.xml \
+		$(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml \
+		$(LOCAL_PATH)/configs/media/mtk_omx_core.cfg:system/vendor/etc/mtk_omx_core.cfg
 
 # Keyboard layout
 PRODUCT_COPY_FILES += \
-  $(LOCAL_PATH)/configs/mtk-kpd.kl:system/usr/keylayout/mtk-kpd.kl \
-  $(LOCAL_PATH)/configs/ACCDET.kl:system/usr/keylayout/ACCDET.kl \
+		$(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/keylayout,system/usr/keylayout) \
+		$(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/idc,system/usr/idc)
 
+# Telephony
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/telephony,system/vendor/etc)
+
+# Misc
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/misc,system/vendor/etc) \
+    $(LOCAL_PATH)/configs/misc/clatd.conf:system/etc/clatd.conf
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/radvd/radvd.conf:system/vendor/etc/radvd/radvd.conf
+
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,${LOCAL_PATH}/configs/wide-dhcpv6,system/vendor/etc/wide-dhcpv6)
+
+# Motorola Camera permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/com.motorola.camera.xml:system/etc/permissions/com.motorola.camera.xml \
+    $(LOCAL_PATH)/configs/com.motorola.motosignature.xml:system/etc/permissions/com.motorola.motosignature.xml \
+    $(LOCAL_PATH)/configs/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
