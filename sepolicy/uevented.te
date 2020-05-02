@@ -1,2 +1,0 @@
-#Added policy for ueventd by Mohamed Zumair
-allow ueventd device:chr_file { relabelfrom relabelto };

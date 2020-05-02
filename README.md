@@ -1,7 +1,7 @@
-#                                       Device Tree for Motorola E4 (7.x , 3.18.35+)
+#                                  orangefox Device Tree for Motorola E4 (9.x , 3.18.140)
 
-The Moto E4 (codenamed _"nicklaus"_) is a mid-range smartphone from Motorola.
-![Moto E4](https://github.com/mhdzumair/device_nicklaus/raw/los-14.1/Moto-E4-Plus.jpg "Moto E4 Plus")
+The Moto E4 Plus(codenamed _"nicklaus"_) is a mid-range smartphone from Motorola.
+![Moto E4 Plus](https://github.com/mhdzumair/device_nicklaus/raw/los-14.1/Moto-E4-Plus.jpg "Moto E4 Plus")
 
 Basic   | Spec Sheet
 -------:|:-------------------------

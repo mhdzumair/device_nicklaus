@@ -1,2 +1,0 @@
-#Added by Mohamed Zumair
-allow debuggerd init:process getsched;

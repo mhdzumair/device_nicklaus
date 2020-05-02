@@ -1,3 +1,0 @@
-#added fingerprint permission by mohamed Zumair
-
-allow gatekeeperd teei_fp_device:chr_file { read write open ioctl };

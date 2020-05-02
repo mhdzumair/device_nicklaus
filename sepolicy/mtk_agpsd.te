@@ -1,3 +1,0 @@
-#Added Mohamed Zumair
-allow mtk_agpsd sdcardfs:dir { search };
-allow mtk_agpsd media_rw_data_file:dir { search read open };

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_nicklaus.mk
+    $(LOCAL_DIR)/omni_nicklaus.mk
