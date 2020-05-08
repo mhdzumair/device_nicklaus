@@ -33,6 +33,7 @@ type rild_mal_at_socket, file_type;
 type rild_mal_md2_socket, file_type;
 type rild_mal_at_md2_socket, file_type;
 type netdiag_socket, file_type;
+type rilproxy_atci_socket, file_type;
 
 type custom_file, file_type, data_file_type;
 type radvd_data_file, file_type, data_file_type;
@@ -68,7 +69,5 @@ type autokd_data_file, file_type, data_file_type;
 type aee_core_data_file, file_type, data_file_type;
 
 type mal_data_file, file_type, data_file_type;
-type rild_mal_socket, file_type;
-type rild_mal_at_socket, file_type;
-type rild_mal_md2_socket, file_type;
-type rild_mal_at_md2_socket, file_type;
+type rild_via_socket, file_type;
+

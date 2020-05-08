@@ -33,10 +33,9 @@
 #socket
 /dev/socket/volte_imsa1(/.*)?	u:object_r:volte_imsa1_socket:s0
 /dev/socket/volte_stack(/.*)?	u:object_r:volte_stack_socket:s0
-
+/dev/socket/rild-via u:object_r:rild_via_socket:s0
 /dev/emd.* u:object_r:emd_device:s0
 /data/misc/stp_dump(/.*)? u:object_r:stp_dump_data_file:s0
-/(system\/vendor|vendor)/bin/starter u:object_r:starter_exec:s0
 /dev/socket/wod_dns(/.*)? u:object_r:wod_dns_socket:s0
 /data/ipsec/wo(/.*)? u:object_r:wod_apn_conf_file:s0
 /data/ipsec(/.*)? u:object_r:wod_ipsec_conf_file:s0
@@ -73,10 +72,8 @@
 /dev/socket/volte_imsm_dongle(/.*)? u:object_r:rild_imsm_socket:s0
 /dev/socket/volte_vt(/.*)? u:object_r:volte_vt_socket:s0
 /dev/socket/rilproxy-mal(/.*)? u:object_r:rild_mal_socket:s0
+/dev/socket/rilproxy-atci(/.*)? u:object_r:rilproxy_atci_socket:s0
 /dev/socket/rild-mal(/.*)? u:object_r:rild_mal_socket:s0
-/dev/socket/rild-mal-at(/.*)? u:object_r:rild_mal_at_socket:s0
-/dev/socket/rild-mal-md2(/.*)? u:object_r:rild_mal_md2_socket:s0
-/dev/socket/rild-mal-at-md2(/.*)? u:object_r:rild_mal_at_md2_socket:s0
 /dev/socket/rild-mal-at(/.*)? u:object_r:rild_mal_at_socket:s0
 /dev/socket/rild-mal-md2(/.*)? u:object_r:rild_mal_md2_socket:s0
 /dev/socket/rild-mal-at-md2(/.*)? u:object_r:rild_mal_at_md2_socket:s0
@@ -131,3 +128,4 @@
 /(system\/vendor|vendor)/bin/aal u:object_r:aal_exec:s0
 /(system\/vendor|vendor)/bin/slpd u:object_r:slpd_exec:s0
 /(system\/vendor|vendor)/bin/MtkCodecService u:object_r:MtkCodecService_exec:s0
+/(system\/vendor|vendor)/bin/rilproxy u:object_r:rilproxy_exec:s0

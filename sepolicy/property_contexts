@@ -34,3 +34,6 @@ debug.bq.dump u:object_r:debug_bq_dump_prop:s0
 
 #============= allow mal ==============
 persist.mal u:object_r:persist_mal_prop:s0
+
+#=============allow c2k_prop ==============
+cdma. u:object_r:cdma_prop:s0

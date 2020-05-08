@@ -49,4 +49,7 @@ type debug_mtk_aee_prop, property_type, mtk_property_type;
 type debug_bq_dump_prop, property_type, mtk_property_type;
 
 #=============allow mtkmd to set property==============
-type persist_mal_prop, property_type, mtk_core_property_type;
+type persist_mal_prop, property_type, mtk_property_type;
+
+#=============allow statusd==============
+type cdma_prop, property_type, mtk_property_type;
