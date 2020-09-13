@@ -1,5 +1,5 @@
 #
-# system.prop for woods
+# system.prop for nicklaus
 #
 ro.hardware=mt6735
 ro.board.platform=mt6737m
